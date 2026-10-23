@@ -311,7 +311,9 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   padding:28px 28px 24px;
   transition:border-color .15s ease;
 }
+.project--link{ display:block; }
 .project:hover{ border-color:var(--blue); }
+.project--link:focus-visible{ outline-color:var(--blue); }
 .project__head{
   display:flex; align-items:baseline; justify-content:space-between; gap:16px;
   margin-bottom:12px; flex-wrap:wrap;
@@ -329,6 +331,13 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 }
 .project p{ color:var(--muted); margin:0 0 16px; max-width:70ch; }
 .project__tags{ display:flex; gap:8px; flex-wrap:wrap; }
+.project__link-cue{
+  display:inline-block;
+  margin-top:18px;
+  color:var(--blue);
+  font-family:var(--font-mono);
+  font-size:0.82rem;
+}
 
 .projects__more{
   margin-top:24px;

@@ -1,223 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashutosh Biswal — ML & Python Developer</title>
-<meta name="description" content="Portfolio of Ashutosh Biswal, a Computer Science student building machine learning models and Python applications.">
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <meta name="description" content="Ashutosh Biswal is a Computer Science student building practical machine learning systems, AI applications, and dependable backends.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ashutosh Biswal — Applied ML & Software Engineering">
+  <meta property="og:description" content="Building intelligent systems that solve real-world problems.">
+  <meta property="og:image" content="assets/headshot.jpg">
+  <title>Ashutosh Biswal — Applied ML & Software Engineering</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="grid-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ashutosh Biswal, home">AB<span>.</span></a>
+    <button class="menu-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#activity">GitHub</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"></path></svg>
+      </button>
+    </nav>
+  </header>
 
-<header class="nav">
-  <a href="#top" class="nav__brand">AB<span class="nav__cursor">_</span></a>
-  <nav class="nav__links">
-    <a href="#about">about</a>
-    <a href="#skills">skills</a>
-    <a href="#projects">projects</a>
-    <a href="#education">education</a>
-    <a href="#contact">contact</a>
-  </nav>
-  <a class="nav__resume" href="mailto:bashutosh017@gmail.com">say hello</a>
-  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Open menu">
-    <span></span><span></span>
-  </button>
-</header>
-
-<nav id="navMobile" class="nav-mobile">
-  <a href="#about">about</a>
-  <a href="#skills">skills</a>
-  <a href="#projects">projects</a>
-  <a href="#education">education</a>
-  <a href="#contact">contact</a>
-</nav>
-
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__text">
-      <p class="hero__kicker">Bhubaneswar, India</p>
-      <h1 class="hero__title">Ashutosh Biswal</h1>
-      <p class="hero__role">Computer Science student building machine&nbsp;learning models and full‑stack Python applications.</p>
-      <p class="hero__desc">Third-year CSE student at BPUT with hands-on experience across the ML pipeline — from cleaning data to shipping the API that serves the model. I like projects where a prediction has to actually work, not just score well in a notebook.</p>
-      <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary">View projects</a>
-        <a href="https://github.com/bashutosh017" target="_blank" rel="noopener" class="btn btn--ghost">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="hero__panel">
-      <div class="cell">
-        <div class="cell__bar">
-          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-          <span class="cell__label">profile.py</span>
+  <main id="main">
+    <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Computer Science student · Bhubaneswar, India</p>
+        <h1 id="hero-title">Building intelligent systems that solve <span>real-world problems.</span></h1>
+        <p class="hero-intro">I’m Ashutosh Biswal, focused on Machine Learning, AI engineering, backend development, and deploying practical data-driven applications.</p>
+        <div class="hero-focus">
+          <span>Python</span><span>Applied ML</span><span>Model APIs</span><span>Data products</span>
         </div>
-        <div class="cell__body">
-<pre><code><span class="tok-kw">In [1]:</span> <span class="tok-com"># who's building this?</span>
-
-<span class="tok-var">profile</span> = {
-    <span class="tok-str">"name"</span>: <span class="tok-str">"Ashutosh Biswal"</span>,
-    <span class="tok-str">"role"</span>: <span class="tok-str">"ML & Python Developer"</span>,
-    <span class="tok-str">"studying"</span>: <span class="tok-str">"B.Tech CSE, BPUT '28"</span>,
-    <span class="tok-str">"stack"</span>: [
-        <span class="tok-str">"Python"</span>, <span class="tok-str">"scikit-learn"</span>,
-        <span class="tok-str">"TensorFlow"</span>, <span class="tok-str">"PyTorch"</span>,
-        <span class="tok-str">"Flask"</span>, <span class="tok-str">"FastAPI"</span>,
-    ],
-    <span class="tok-str">"currently"</span>: <span class="tok-str">"open to internships"</span>,
-}
-
-<span class="tok-kw">Out[1]:</span> <span class="tok-com">building things that ship.</span></code></pre>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a>
+          <a class="button button--text" href="mailto:bashutosh017@gmail.com?subject=Resume%20request">Request resume <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="social-links" aria-label="Professional links">
+          <a href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/connect-ashutosh-biswal/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="mailto:bashutosh017@gmail.com">Email <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <img class="hero__photo" src="assets/headshot.jpg" alt="Portrait of Ashutosh Biswal">
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <h2 class="section__title">About</h2>
-    <div class="about__grid">
-      <img class="about__photo" src="assets/about.jpg" alt="Ashutosh Biswal standing outdoors">
-      <div class="about__copy">
-        <p>I'm a third-year Computer Science & Engineering student at Biju Patnaik University of Technology, spending most of my time in the space between machine learning and software engineering — training a model is only half the job; the other half is wrapping it in something people can actually use.</p>
-        <p>My work so far has centered on applied ML: cleaning and engineering features out of messy tabular data, building classifiers with scikit-learn and gradient-boosted trees, and prototyping deep learning models with TensorFlow and PyTorch. On the engineering side, I build the APIs and services around those models with Flask and FastAPI, track experiments with Git, and containerize what I ship with Docker.</p>
-        <p>I'm looking for opportunities to bring these skills to a real engineering team — and to keep learning from people who've shipped more than I have.</p>
+      <div class="hero-art" aria-label="A visual overview of my engineering workflow">
+        <div class="hero-art__top"><span>HOW I BUILD</span><span>01 — 04</span></div>
+        <div class="workflow">
+          <div class="workflow-step"><span class="workflow-step__icon">01</span><div><strong>Understand</strong><small>Real problem, real users</small></div></div>
+          <div class="workflow-line"></div>
+          <div class="workflow-step"><span class="workflow-step__icon">02</span><div><strong>Build</strong><small>Data, models, software</small></div></div>
+          <div class="workflow-line"></div>
+          <div class="workflow-step"><span class="workflow-step__icon">03</span><div><strong>Evaluate</strong><small>Evidence over hype</small></div></div>
+          <div class="workflow-line"></div>
+          <div class="workflow-step"><span class="workflow-step__icon workflow-step__icon--last">04</span><div><strong>Ship</strong><small>Useful, maintainable tools</small></div></div>
+        </div>
+        <div class="hero-art__foot"><span>Applied machine learning</span><span class="pulse-mark" aria-hidden="true"></span></div>
       </div>
-    </div>
-  </section>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section skills">
-    <h2 class="section__title">Skills</h2>
-    <div class="terminal">
-      <div class="cell__bar">
-        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-        <span class="cell__label">~/skills — pip list</span>
+    <section class="section page-wrap" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">01 / About</p>
+        <h2 id="about-title">Curiosity, grounded in engineering.</h2>
       </div>
-      <div class="terminal__body">
-        <div class="skill-row">
-          <span class="skill-row__label">languages</span>
-          <div class="skill-tags">
-            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
-          </div>
+      <div class="about-grid">
+        <div class="about-portrait">
+          <img src="assets/about.jpg" alt="Ashutosh Biswal outdoors" loading="lazy" decoding="async">
+          <span class="portrait-caption">Bhubaneswar, India</span>
         </div>
-        <div class="skill-row">
-          <span class="skill-row__label">ml &amp; data</span>
-          <div class="skill-tags">
-            <span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Matplotlib</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-row__label">backend</span>
-          <div class="skill-tags">
-            <span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="skill-row__label">tooling</span>
-          <div class="skill-tags">
-            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span><span class="tag">Postman</span>
+        <div class="about-copy">
+          <p class="lead">I’m a Computer Science &amp; Engineering student at Biju Patnaik University of Technology, interested in the space where machine learning meets useful software.</p>
+          <p>My project work spans tabular data preparation, feature engineering, classification, and the APIs that make a model usable. I care about the whole path: understanding the problem, validating the approach, and making the result accessible beyond a notebook.</p>
+          <p>I’m looking to learn alongside thoughtful engineering teams and contribute to practical AI and backend projects.</p>
+          <div class="about-facts">
+            <div><span class="fact-label">STUDYING</span><strong>B.Tech, Computer Science &amp; Engineering</strong></div>
+            <div><span class="fact-label">UNIVERSITY</span><strong>BPUT · Expected 2028</strong></div>
+            <div><span class="fact-label">OPEN TO</span><strong>Internships &amp; collaboration</strong></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section projects">
-    <h2 class="section__title">Projects</h2>
-    <div class="project-list">
-
-      <a class="project project--link" href="https://credit-card-approval-model-live.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live Credit Card Approval Prediction app">
-        <div class="project__head">
-          <h3>Credit Card Approval Prediction</h3>
-          <span class="project__stat">93% accuracy</span>
-        </div>
-        <p>A machine learning classifier that predicts credit card approval outcomes. Built the full pipeline with Pandas — cleaning, preprocessing, and feature engineering — then trained a LightGBM model with scikit-learn, addressing class imbalance and tuning hyperparameters for real-world reliability rather than just a leaderboard score.</p>
-        <div class="project__tags">
-          <span class="tag">LightGBM</span><span class="tag">scikit-learn</span><span class="tag">Pandas</span>
-        </div>
-        <span class="project__link-cue">Live demo ↗</span>
-      </a>
-
-      <article class="project">
-        <div class="project__head">
+    <section class="section section--compact" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Experience &amp; collaboration</p>
+        <h2 id="experience-title">Good work is a team effort.</h2>
+      </div>
+      <article class="experience-card">
+        <div class="experience-card__mark" aria-hidden="true">IM</div>
+        <div class="experience-card__body">
+          <div class="project-meta"><span>COLLABORATIVE PROJECT</span><span class="project-status">Team project</span></div>
           <h3>InternMatch</h3>
-          <span class="project__stat">Group project</span>
+          <p>Worked with a small team on an internship-matching platform, collaborating on product features and the student-to-opportunity matching workflow.</p>
         </div>
-        <p>An internship and job matching platform that pairs students with roles based on CGPA and skill profile. Collaborated within a small team on feature design and development, working through the platform's matching logic and the surrounding product surface.</p>
-        <div class="project__tags">
-          <span class="tag">Python</span><span class="tag">Team project</span>
-        </div>
+        <a class="arrow-link" href="#projects">Project details <span aria-hidden="true">↘</span></a>
       </article>
+    </section>
 
-    </div>
-    <p class="projects__more">More on <a href="https://github.com/bashutosh017" target="_blank" rel="noopener">github.com/bashutosh017 ↗</a></p>
-  </section>
-
-  <!-- EDUCATION + CERTIFICATIONS -->
-  <section id="education" class="section edu">
-    <h2 class="section__title">Education</h2>
-    <ol class="timeline">
-      <li>
-        <span class="timeline__year">2024 – 2028</span>
-        <div>
-          <h3>B.Tech, Computer Science & Engineering</h3>
-          <p>Biju Patnaik University of Technology (BPUT) · expected 2028</p>
+    <section class="section section--tint" id="projects" aria-labelledby="projects-title">
+      <div class="page-wrap">
+        <div class="section-heading section-heading--row">
+          <div><p class="eyebrow">03 / Selected work</p><h2 id="projects-title">Projects with a purpose.</h2></div>
+          <a class="text-link" href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">All work on GitHub <span aria-hidden="true">↗</span></a>
         </div>
-      </li>
-      <!-- <li>
-        <span class="timeline__year">Class XII</span>
-        <div>
-          <h3>Senior Secondary, CBSE</h3>
-          <p>57.5%</p>
+
+        <div class="project-grid">
+          <article class="project-card project-card--featured">
+            <div class="project-visual project-visual--credit" role="img" aria-label="Illustration of the credit approval machine learning pipeline">
+              <div class="visual-window">
+                <div class="visual-window__bar"><span></span><span></span><span></span><small>approval_pipeline</small></div>
+                <div class="pipeline">
+                  <div class="pipeline-node"><small>01</small><strong>Applicant<br>data</strong></div><i aria-hidden="true">→</i>
+                  <div class="pipeline-node"><small>02</small><strong>Feature<br>engineering</strong></div><i aria-hidden="true">→</i>
+                  <div class="pipeline-node pipeline-node--accent"><small>03</small><strong>LightGBM<br>classifier</strong></div>
+                </div>
+                <div class="visual-caption"><span>MODEL WORKFLOW</span><span>ILLUSTRATION</span></div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>01 — MACHINE LEARNING</span><span class="project-status"><i></i> Case study</span></div>
+              <h3>Credit Card Approval Prediction</h3>
+              <p class="project-summary">A tabular classification project exploring how applicant data can support credit approval decisions, with a LightGBM pipeline and a live prediction demo.</p>
+              <div class="project-detail-grid">
+                <div><span>PROBLEM</span><p>Estimate approval outcomes from structured applicant information.</p></div>
+                <div><span>APPROACH</span><p>Feature engineering, class-imbalance handling, and hyperparameter tuning.</p></div>
+                <div><span>MODEL</span><p>LightGBM classifier with a scikit-learn workflow.</p></div>
+                <div><span>EVIDENCE</span><p>README reports holdout metrics; training code and data are needed to reproduce them.</p></div>
+              </div>
+              <div class="project-footer">
+                <div class="tag-list"><span>LightGBM</span><span>scikit-learn</span><span>Pandas</span></div>
+                <div class="project-links">
+                  <a class="arrow-link" href="credit-card-case-study.html">Case study <span aria-hidden="true">↗</span></a>
+                  <a class="arrow-link" href="https://credit-card-approval-model-live.onrender.com" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>
+                  <a class="arrow-link" href="https://github.com/bashutosh017/Credit-Card-Approval-Model-live" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual project-visual--match" role="img" aria-label="Illustration of student profiles matched with internship opportunities">
+              <div class="match-board">
+                <div class="match-card"><span class="match-avatar">S</span><span><b>Student profile</b><small>Skills · interests · CGPA</small></span><span class="match-dots">•••</span></div>
+                <div class="match-connector"><span></span><span></span><span></span></div>
+                <div class="match-card match-card--result"><span class="match-symbol">✳</span><span><b>Role recommendations</b><small>Relevant internship matches</small></span><span class="match-score">MATCH</span></div>
+              </div>
+              <span class="visual-label">MATCHING WORKFLOW · ILLUSTRATION</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span>02 — RECOMMENDATION</span><span class="project-status">Team project</span></div>
+              <h3>InternMatch</h3>
+              <p class="project-summary">A student-to-internship matching concept that uses student profiles and opportunity requirements to surface relevant roles.</p>
+              <div class="project-detail-grid">
+                <div><span>PROBLEM</span><p>Help students navigate opportunities against their skills and profile.</p></div>
+                <div><span>APPROACH</span><p>Random Forest recommendation workflow, as described for the project.</p></div>
+                <div><span>INPUTS</span><p>Student skills and CGPA are part of the described matching profile.</p></div>
+                <div><span>EVIDENCE</span><p>Training data, evaluation, and repository link are not published here.</p></div>
+              </div>
+              <div class="project-footer">
+                <div class="tag-list"><span>Random Forest</span><span>Python</span><span>Teamwork</span></div>
+                <a class="arrow-link" href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--roadmap">
+            <div class="roadmap-mark" aria-hidden="true"><span>कृषि</span><b>AI</b><i>✳</i></div>
+            <div class="project-content">
+              <div class="project-meta"><span>03 — IN DEVELOPMENT</span><span class="project-status project-status--muted">Roadmap</span></div>
+              <h3>KrishiAI</h3>
+              <p class="project-summary">Planned agricultural assistant exploring crop-health analysis, agricultural intelligence, and mandi price prediction. This project is not presented as a completed or validated system.</p>
+              <div class="project-footer">
+                <div class="tag-list"><span>AgriTech</span><span>AI concept</span></div>
+                <span class="coming-soon">Work in progress</span>
+              </div>
+            </div>
+          </article>
         </div>
-      </li>
-      <li>
-        <span class="timeline__year">Class X</span>
-        <div>
-          <h3>Secondary, CBSE</h3>
-          <p>81.2%</p>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Toolkit</p>
+        <h2 id="skills-title">Skills, organized by craft.</h2>
+        <p class="section-intro">A practical toolkit built through coursework and project work. I’m continuing to deepen my skills in model evaluation and production-minded AI engineering.</p>
+      </div>
+      <div class="skills-dashboard">
+        <article class="skill-group"><span class="skill-index">01</span><div><h3>Programming</h3><p>Languages I work with</p></div><div class="skill-items"><span>Python</span><span>Java</span><span>C</span></div></article>
+        <article class="skill-group"><span class="skill-index">02</span><div><h3>Machine learning</h3><p>Modeling &amp; evaluation</p></div><div class="skill-items"><span>scikit-learn</span><span>LightGBM</span><span>Feature engineering</span></div></article>
+        <article class="skill-group"><span class="skill-index">03</span><div><h3>Deep learning</h3><p>Hands-on frameworks</p></div><div class="skill-items"><span>PyTorch</span><span>TensorFlow</span></div></article>
+        <article class="skill-group"><span class="skill-index">04</span><div><h3>Data science</h3><p>Working with data</p></div><div class="skill-items"><span>Pandas</span><span>NumPy</span><span>SciPy</span><span>Matplotlib</span></div></article>
+        <article class="skill-group"><span class="skill-index">05</span><div><h3>Backend</h3><p>Model-serving APIs</p></div><div class="skill-items"><span>Flask</span><span>FastAPI</span></div></article>
+        <article class="skill-group"><span class="skill-index">06</span><div><h3>Database</h3><p>Project stack</p></div><div class="skill-items"><span>PostgreSQL</span></div></article>
+        <article class="skill-group"><span class="skill-index">07</span><div><h3>DevOps &amp; workflow</h3><p>Build, test, collaborate</p></div><div class="skill-items"><span>Git</span><span>GitHub</span><span>Docker</span><span>Postman</span></div></article>
+        <article class="skill-group"><span class="skill-index">08</span><div><h3>Cloud foundations</h3><p>Certification</p></div><div class="skill-items"><span>Oracle Cloud</span></div></article>
+      </div>
+      <p class="skills-note"><span class="note-mark">↗</span> Proficiency varies by tool; the project section shows where I’ve applied these skills. Technologies without project evidence aren’t presented as expert-level.</p>
+    </section>
+
+    <section class="section section--tint" id="activity" aria-labelledby="activity-title">
+      <div class="page-wrap">
+        <div class="section-heading section-heading--row">
+          <div><p class="eyebrow">04 / Open work</p><h2 id="activity-title">Follow the code, not a counter.</h2></div>
+          <a class="text-link" href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">Visit my GitHub profile <span aria-hidden="true">↗</span></a>
         </div>
-      </li> -->
-    </ol>
+        <div class="github-panel">
+          <div class="github-panel__icon" aria-hidden="true">⌘</div>
+          <div class="github-panel__copy">
+            <h3>Projects, repositories &amp; contributions</h3>
+            <p>GitHub is the source of truth for my public code and contribution activity. Repository languages, recent updates, and documentation can be checked directly there—no mirrored or inflated stats.</p>
+          </div>
+          <a class="button button--outline" href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="contributions-card">
+          <div class="contributions-card__head"><div><span class="eyebrow">PUBLIC ACTIVITY</span><h3>Contribution calendar</h3></div><span class="snapshot-date">Snapshot · 12 Nov 2026</span></div>
+          <img src="assets/github-contributions.svg" alt="GitHub contribution calendar for the year ending 12 November 2026" loading="lazy" decoding="async">
+          <figcaption>Self-hosted snapshot of the public GitHub contribution graph. <a href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">View the live profile for current activity ↗</a></figcaption>
+        </figure>
+        <div class="repo-grid" aria-label="Featured public repositories">
+          <article class="repo-card">
+            <div class="repo-card__top"><span>FEATURED REPOSITORY</span><span class="repo-language"><i></i> Python</span></div>
+            <h3><a href="https://github.com/bashutosh017/Credit-Card-Approval-Model-live" target="_blank" rel="noopener noreferrer">Credit-Card-Approval-Model-live ↗</a></h3>
+            <p>LightGBM credit-approval app with a Flask prediction endpoint and a hosted interactive demo.</p>
+            <div class="repo-card__links"><a href="https://github.com/bashutosh017/Credit-Card-Approval-Model-live/blob/main/README.md" target="_blank" rel="noopener noreferrer">README ↗</a><a href="https://credit-card-approval-model-live.onrender.com" target="_blank" rel="noopener noreferrer">Live demo ↗</a></div>
+          </article>
+          <article class="repo-card">
+            <div class="repo-card__top"><span>RECENTLY UPDATED</span><span class="repo-language"><i></i> Python</span></div>
+            <h3><a href="https://github.com/bashutosh017/Netra-An-Automated-Smart-Traffic-Lane-Accident-Monitoring-System" target="_blank" rel="noopener noreferrer">Netra ↗</a></h3>
+            <p>Traffic-monitoring system for detecting vehicles, tracking lane rules, and surfacing alerts in a dashboard.</p>
+            <div class="repo-card__links"><a href="https://github.com/bashutosh017/Netra-An-Automated-Smart-Traffic-Lane-Accident-Monitoring-System/blob/main/README.md" target="_blank" rel="noopener noreferrer">README ↗</a><time datetime="2026-11-12">Updated 12 Nov 2026</time></div>
+          </article>
+          <article class="repo-card repo-card--note">
+            <div class="repo-card__top"><span>DOCUMENTATION CHECK</span><span class="repo-language">GitHub</span></div>
+            <h3>Keep repo details current.</h3>
+            <p>Credit Approval and Netra include READMEs. Zenith-PM’s default branch did not expose a README when checked; add setup and architecture notes to make it easier to evaluate.</p>
+            <div class="repo-card__links"><a href="https://github.com/bashutosh017/Zenith-PM" target="_blank" rel="noopener noreferrer">Zenith-PM ↗</a><a href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">Browse repositories ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <h2 class="section__title section__title--spaced">Certifications</h2>
-    <ul class="certs">
-      <li><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CEF68B9917DEB747A6C649C1AF8A13E69504018E63F940E2C3B6FAB4DB45EC8C" target="_blank" rel="noopener"><span>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</span><span class="certs__issuer">Oracle</span></a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/R4QJG4KWF47L" target="_blank" rel="noopener"><span>Introduction to Generative AI</span><span class="certs__issuer">Coursera</span></a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/NFGU2NR3I445" target="_blank" rel="noopener"><span>Responsible AI: Applying AI Principles with Google Cloud</span><span class="certs__issuer">Coursera</span></a></li>
-      <li><a href="https://www.credly.com/badges/4d975b2f-3b99-4f7e-b25f-8cf0d9aad68c/" target="_blank" rel="noopener"><span>Artificial Intelligence Fundamentals</span><span class="certs__issuer">ICT Academy</span></a></li>
-    </ul>
-  </section>
+    <section class="section page-wrap" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <p class="eyebrow">05 / The journey</p>
+        <h2 id="journey-title">Learning by building.</h2>
+      </div>
+      <div class="journey-grid">
+        <div class="journey-column">
+          <h3>Education</h3>
+          <div class="journey-item"><span class="journey-date">2024 — 2028</span><div><strong>B.Tech, Computer Science &amp; Engineering</strong><p>Biju Patnaik University of Technology · expected 2028</p></div></div>
+        </div>
+        <div class="journey-column">
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            <li><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=CEF68B9917DEB747A6C649C1AF8A13E69504018E63F940E2C3B6FAB4DB45EC8C" target="_blank" rel="noopener noreferrer"><span>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</span><small>Oracle ↗</small></a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/R4QJG4KWF47L" target="_blank" rel="noopener noreferrer"><span>Introduction to Generative AI</span><small>Coursera ↗</small></a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/NFGU2NR3I445" target="_blank" rel="noopener noreferrer"><span>Responsible AI: Applying AI Principles with Google Cloud</span><small>Coursera ↗</small></a></li>
+            <li><a href="https://www.credly.com/badges/4d975b2f-3b99-4f7e-b25f-8cf0d9aad68c/" target="_blank" rel="noopener noreferrer"><span>Artificial Intelligence Fundamentals</span><small>ICT Academy ↗</small></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="learning-strip"><span class="learning-icon">↗</span><div><span class="eyebrow">CURRENT FOCUS</span><p>Reliable model evaluation · practical AI applications · backend systems that make ML useful</p></div></div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <h2 class="section__title">Get in touch</h2>
-    <p class="contact__lead">Open to internships and entry-level roles in ML and Python engineering. The fastest way to reach me is email.</p>
-    <div class="contact__links">
-      <a href="mailto:bashutosh017@gmail.com">bashutosh017@gmail.com</a>
-      <a href="tel:+919937460766">+91 99374 60766</a>
-      <a href="https://www.linkedin.com/in/connect-ashutosh-biswal/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://github.com/bashutosh017" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
-  </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="page-wrap contact-inner">
+        <div><p class="eyebrow">06 / Say hello</p><h2 id="contact-title">Let’s build something<br><span>useful together.</span></h2></div>
+        <div class="contact-copy">
+          <p>Open to internships, collaboration, and conversations about applied machine learning and software engineering.</p>
+          <a class="contact-email" href="mailto:bashutosh017@gmail.com">bashutosh017@gmail.com <span aria-hidden="true">↗</span></a>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/connect-ashutosh-biswal/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/bashutosh017" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="tel:+919937460766">+91 99374 60766</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</main>
+  <footer class="site-footer page-wrap">
+    <a class="brand" href="#top" aria-label="Back to top">AB<span>.</span></a>
+    <p>Ashutosh Biswal · Bhubaneswar, India</p>
+    <p>© <span id="year">2026</span> Built with care.</p>
+  </footer>
 
-<footer class="footer">
-  <span>Ashutosh Biswal — Bhubaneswar, India</span>
-  <p>&copy; 2024-<script>document.write(new Date().getFullYear());</script> Made with HTML, CSS & JS.</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

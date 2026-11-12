@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <meta name="description" content="Technical case study for Ashutosh Biswal's LightGBM credit card approval prediction project, including implementation details and evidence gaps.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Credit Card Approval Prediction — Technical Case Study">
+  <meta property="og:description" content="A transparent look at the LightGBM workflow, evaluation evidence, and limitations.">
+  <title>Credit Card Approval Prediction — Ashutosh Biswal</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ashutosh Biswal, portfolio">AB<span>.</span></a>
+    <nav class="case-nav" aria-label="Case study navigation">
+      <a href="index.html#projects">← All projects</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"></path></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero page-wrap">
+      <p class="eyebrow"><span class="status-dot"></span> Technical case study · Applied machine learning</p>
+      <h1>Credit Card Approval <span>Prediction</span></h1>
+      <p class="case-lead">A tabular classification project built around a LightGBM pipeline. This case study links the live Flask demo and reports the evaluation described in the repository README, while being clear about what is and is not reproducible from the tracked files.</p>
+      <div class="case-tags"><span>LightGBM</span><span>scikit-learn</span><span>Pandas</span><span>Feature engineering</span></div>
+      <div class="case-status"><strong>Evidence note</strong><span>The README reports holdout metrics, but the training script and dataset are not present in the repository root. Results are attributed to the README and are not independently reproducible from the tracked source.</span></div>
+      <div class="case-visual" role="img" aria-label="Illustration of the data preparation, LightGBM model, and prediction workflow">
+        <div class="case-flow">
+          <div class="case-flow__step"><small>01 / INPUT</small><strong>Applicant<br>records</strong><span>Structured data</span></div>
+          <i aria-hidden="true">→</i>
+          <div class="case-flow__step"><small>02 / PREPARE</small><strong>Feature<br>engineering</strong><span>Cleaning · transforms</span></div>
+          <i aria-hidden="true">→</i>
+          <div class="case-flow__step case-flow__step--active"><small>03 / MODEL</small><strong>LightGBM</strong><span>Classifier</span></div>
+          <i aria-hidden="true">→</i>
+          <div class="case-flow__step"><small>04 / OUTPUT</small><strong>Approval<br>estimate</strong><span>Decision support</span></div>
+        </div>
+        <p>Workflow illustration · not a product screenshot</p>
+      </div>
+    </section>
+
+    <div class="case-layout page-wrap">
+      <aside class="case-toc" aria-label="On this page">
+        <span>ON THIS PAGE</span>
+        <a href="#problem">01 Problem</a>
+        <a href="#dataset">02 Dataset</a>
+        <a href="#model">03 Model development</a>
+        <a href="#evaluation">04 Evaluation</a>
+        <a href="#deployment">05 Deployment</a>
+        <a href="#limitations">06 Limitations</a>
+      </aside>
+
+      <div class="case-content">
+        <section class="case-section" id="problem">
+          <p class="eyebrow">01 / Problem definition</p>
+          <h2>Make a high-stakes workflow more informed.</h2>
+          <p>Credit approval prediction is a useful machine-learning exercise because it turns structured applicant information into an estimate that can support an initial review. In any real lending workflow, a model output should be treated as decision support—not as an automatic approval or rejection. Human review, clear explanations, and appropriate governance remain essential.</p>
+        </section>
+
+        <section class="case-section" id="dataset">
+          <p class="eyebrow">02 / Dataset</p>
+          <h2>Data provenance comes first.</h2>
+          <p>The repository README describes 1,000 realistic applicant records and simulated market noise, with an 80.3% rejection / 19.7% approval class split. It lists age, city tier, employment type, monthly income, CIBIL score, and FOIR percentage as model inputs; application ID is excluded to avoid leakage. A dataset citation, license, or downloadable data file is not provided.</p>
+          <div class="evidence-grid">
+            <div><span>DATASET SIZE</span><strong>1,000 records, per README</strong></div>
+            <div><span>FEATURES</span><strong>6 inputs + approval label</strong></div>
+            <div><span>DATA PROVENANCE</span><strong>Source and license not cited</strong></div>
+            <div><span>PREPROCESSING CODE</span><strong>Not tracked in repository root</strong></div>
+          </div>
+        </section>
+
+        <section class="case-section" id="model">
+          <p class="eyebrow">03 / Model development</p>
+          <h2>LightGBM, with attention to the pipeline.</h2>
+          <p>The README describes LightGBM with cost-sensitive class-imbalance handling and hyperparameter settings of <code>is_unbalance=True</code>, 100 estimators, max depth 5, and learning rate 0.05. It names <code>model.py</code> as the training engine, but that file is not in the repository root; the deployed Flask app loads serialized model and feature artifacts with joblib.</p>
+          <div class="model-callout">
+            <span class="model-callout__mark">42</span>
+            <p><strong>Reproducibility detail from README</strong><br>Random state 42 is documented for repeatable generation. The dataset, training script, and full environment lockfile are still needed to independently rerun the reported evaluation.</p>
+          </div>
+        </section>
+
+        <section class="case-section" id="evaluation">
+          <p class="eyebrow">04 / Evaluation</p>
+          <h2>Results need context and artifacts.</h2>
+          <p>The README reports a randomized 200-record holdout, confusion matrix, weighted F1, and ROC-AUC. The class-level precision, recall, and F1 values below are calculated from that published matrix; weighted F1 and ROC-AUC are quoted from the README. The training code and evaluation artifacts are not tracked with the app, so the results cannot currently be independently reproduced.</p>
+          <div class="confusion-wrap">
+            <span class="table-caption">Confusion matrix · actual rows × predicted columns</span>
+            <table class="confusion-table">
+              <thead><tr><th></th><th>Rejected</th><th>Approved</th></tr></thead>
+              <tbody><tr><th>Rejected</th><td>161</td><td>0</td></tr><tr><th>Approved</th><td>6</td><td>33</td></tr></tbody>
+            </table>
+          </div>
+          <div class="metric-table" role="table" aria-label="Evaluation metrics reported in the project README">
+            <div class="metric-row metric-row--head" role="row"><span role="columnheader">Measure</span><span role="columnheader">Value</span><span role="columnheader">How obtained</span></div>
+            <div class="metric-row" role="row"><strong role="cell">Approval precision / recall / F1</strong><span role="cell">1.00 / 0.846 / 0.917</span><span role="cell">Calculated from README confusion matrix</span></div>
+            <div class="metric-row" role="row"><strong role="cell">Rejection precision / recall / F1</strong><span role="cell">0.964 / 1.00 / 0.982</span><span role="cell">Calculated from README confusion matrix</span></div>
+            <div class="metric-row" role="row"><strong role="cell">Weighted F1</strong><span role="cell">0.97</span><span role="cell">Reported in README</span></div>
+            <div class="metric-row" role="row"><strong role="cell">ROC-AUC</strong><span role="cell">0.9230</span><span role="cell">Reported in README</span></div>
+          </div>
+          <p class="case-small">To make these results independently verifiable, publish the dataset or its source, training/evaluation script, split seed, and a saved evaluation report. The README describes simulated data, so these results should not be interpreted as validation on real credit applicants.</p>
+        </section>
+
+        <section class="case-section" id="deployment">
+          <p class="eyebrow">05 / Deployment</p>
+          <h2>Deployed demo, with a clear boundary.</h2>
+          <p>The project is deployed on Render as a Flask application. Its <code>POST /predict</code> endpoint validates applicant inputs, loads the serialized LightGBM model with joblib, and returns an approval estimate. The current app uses a 0.35 probability threshold; the result is a demo prediction, not a financial decision or production credit assessment.</p>
+          <div class="deployment-note"><span>LIVE DEMO</span><strong>Flask app · Render</strong><a href="https://credit-card-approval-model-live.onrender.com" target="_blank" rel="noopener noreferrer">Open prediction demo ↗</a></div>
+          <p class="case-small"><a href="https://github.com/bashutosh017/Credit-Card-Approval-Model-live" target="_blank" rel="noopener noreferrer">Source repository ↗</a> · <a href="https://github.com/bashutosh017/Credit-Card-Approval-Model-live/blob/main/README.md" target="_blank" rel="noopener noreferrer">README and reported metrics ↗</a></p>
+        </section>
+
+        <section class="case-section" id="limitations">
+          <p class="eyebrow">06 / Limitations</p>
+          <h2>Prediction is not the same as a fair decision.</h2>
+          <ul class="limitations-list">
+            <li><strong>Bias and representativeness</strong><span>Historical labels and sampling choices can encode unfair patterns. Subgroup analysis and careful governance are necessary before real use.</span></li>
+            <li><strong>Uncertainty</strong><span>A model score is not a guarantee. Threshold choices change trade-offs between false approvals and false rejections.</span></li>
+            <li><strong>Data shift</strong><span>Applicant populations and economic conditions change; model performance can decay without monitoring and periodic review.</span></li>
+            <li><strong>Scope</strong><span>This project is an educational prediction system, not a validated financial product or a substitute for human review.</span></li>
+          </ul>
+        </section>
+
+        <div class="case-end">
+          <p>Have the repository, dataset reference, or demo?</p>
+          <a class="button button--primary" href="mailto:bashutosh017@gmail.com?subject=Credit%20approval%20project%20resources">Share project resources <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="index.html#projects">Back to selected work</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer page-wrap">
+    <a class="brand" href="index.html">AB<span>.</span></a>
+    <p>Ashutosh Biswal · Bhubaneswar, India</p>
+    <p>© <span id="year">2026</span> Built with care.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
